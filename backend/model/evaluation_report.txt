@@ -1,0 +1,42 @@
+======================================================================
+CROP DISEASE MODEL EVALUATION
+======================================================================
+
+Test images: 3776
+Accuracy: 89.94%
+Precision: 90.02%
+Recall: 89.94%
+F1 Score: 89.92%
+
+======================================================================
+CLASSIFICATION REPORT
+======================================================================
+
+                           precision    recall  f1-score   support
+
+       Cashew_anthracnose     0.9480    0.9115    0.9294       260
+           Cashew_gumosis     1.0000    1.0000    1.0000        59
+           Cashew_healthy     0.9577    0.9903    0.9737       206
+        Cashew_leaf_miner     0.9336    0.9517    0.9426       207
+          Cashew_red_rust     0.9882    0.9921    0.9901       253
+ Cassava_bacterial_blight     0.9505    0.9288    0.9395       393
+       Cassava_brown_spot     0.9292    0.9417    0.9354       223
+       Cassava_green_mite     0.9062    0.9477    0.9265       153
+          Cassava_healthy     0.9615    0.9777    0.9695       179
+           Cassava_mosaic     0.9943    0.9558    0.9746       181
+      Maize_fall_armyworm     0.8667    0.9070    0.8864        43
+         Maize_grasshoper     0.9519    0.9802    0.9659       101
+            Maize_healthy     0.8529    0.9667    0.9062        30
+        Maize_leaf_beetle     0.9852    0.9500    0.9673       140
+        Maize_leaf_blight     0.7419    0.7718    0.7566       149
+          Maize_leaf_spot     0.7579    0.7742    0.7660       186
+       Maize_streak_virus     0.9552    0.8767    0.9143       146
+           Tomato_healthy     0.9067    0.9577    0.9315        71
+       Tomato_leaf_blight     0.8012    0.6963    0.7451       191
+         Tomato_leaf_curl     0.7143    0.6494    0.6803        77
+Tomato_septoria_leaf_spot     0.8294    0.8617    0.8452       412
+  Tomato_verticulium_wilt     0.6850    0.7500    0.7160       116
+
+                 accuracy                         0.8994      3776
+                macro avg     0.8917    0.8972    0.8937      3776
+             weighted avg     0.9002    0.8994    0.8992      3776
