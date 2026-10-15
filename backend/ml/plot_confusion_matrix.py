@@ -66,24 +66,13 @@ def main():
 
     # 4. Display Overall Summary
     print("\n" + "=" * 70)
-    print("OVERALL MODEL PERFORMANCE SUMMARY (FOR RESEARCH PAPER)")
+    print("OVERALL MODEL PERFORMANCE SUMMARY")
     print("=" * 70)
-    print(f"Overall Accuracy           : {accuracy * 100:.2f}% ({accuracy:.4f})")
-    print(f"Weighted Precision         : {weighted_precision * 100:.2f}% ({weighted_precision:.4f})")
-    print(f"Weighted Recall            : {weighted_recall * 100:.2f}% ({weighted_recall:.4f})")
-    print(f"Weighted F1-Score          : {weighted_f1 * 100:.2f}% ({weighted_f1:.4f})")
-    print("-" * 70)
-    print(f"Macro Average Precision    : {macro_precision * 100:.2f}% ({macro_precision:.4f})")
-    print(f"Macro Average Recall       : {macro_recall * 100:.2f}% ({macro_recall:.4f})")
-    print(f"Macro Average F1-Score     : {macro_f1 * 100:.2f}% ({macro_f1:.4f})")
-    print("=" * 70)
-
-    # 5. Display Class-Wise Metrics
-    print("\nCLASS-WISE EVALUATION BREAKDOWN:")
-    print(f"{'Class Name':<28} {'Precision':<10} {'Recall':<10} {'F1-Score':<10} {'Support':<8}")
-    print("-" * 68)
-    for i, cls in enumerate(classes):
-        print(f"{cls:<28} {precision[i]:<10.4f} {recall[i]:<10.4f} {f1[i]:<10.4f} {int(support[i]):<8}")
+    print(f"Accuracy           : {accuracy * 100:.2f}% ({accuracy:.4f})")
+    print(f"Precision         : {weighted_precision * 100:.2f}% ({weighted_precision:.4f})")
+    print(f"Recall            : {weighted_recall * 100:.2f}% ({weighted_recall:.4f})")
+    print(f"F1-Score          : {weighted_f1 * 100:.2f}% ({weighted_f1:.4f})")
+    
 
     # 6. Plot and Save Raw Confusion Matrix Heatmap
     display_labels = [c.replace("_", " ") for c in classes]
