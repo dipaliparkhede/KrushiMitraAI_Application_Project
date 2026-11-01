@@ -1,0 +1,43 @@
+======================================================================
+CROP YIELD PREDICTION MODEL EVALUATION & DATASET SPLIT ALIGNMENT
+======================================================================
+
+Model Architecture: Random Forest Regressor (n_estimators=200, random_state=42)
+Target Variable: Yield (hectare normalized)
+Dataset Split: Train: 17,400 rows (80%) | Test: 4,350 rows (20%) [Rows 17400:21750]
+Total Records: 21,750
+
+======================================================================
+METRICS & BENCHMARK COMPARISON TABLE
+======================================================================
+
++-------------------+----------------------------+-----------------------+----------------------------------+
+| Metric            | Production Model Metadata  | Computed on Rows      | Split Alignment Status           |
+|                   | (yield_model_metadata.json)| 17400:21750           |                                  |
++-------------------+----------------------------+-----------------------+----------------------------------+
+| Test R² Score     | 0.9895                     | 0.9895                | Exact Match to 4 Decimals        |
+| Test MAE          | 7.8035                     | 7.8035                | Exact Match to 4 Decimals        |
+| Test RMSE         | 96.8552                    | 96.8552               | Exact Match to 4 Decimals        |
+| Train R² Score    | 0.9924                     | 0.9924                | Exact Match on First 17,400 Rows |
+| Train MAE         | 5.5610                     | 5.5610                | Exact Match on First 17,400 Rows |
+| Train RMSE        | 85.2803                    | 85.2803               | Exact Match on First 17,400 Rows |
++-------------------+----------------------------+-----------------------+----------------------------------+
+
+======================================================================
+FEATURE SET SPECIFICATION
+======================================================================
+- Categorical Features: State, Crop, Season
+- Numerical Features: Year, Area, Annual_Rainfall, Fertilizer, Pesticide
+- Target: Yield
+
+======================================================================
+DATASET NOTES & ROBUSTNESS SAFEGUARDS
+======================================================================
+1. Leakage Prevention:
+   Production column strictly excluded from inputs to avoid target leakage.
+2. Extension Records (2021-2026):
+   Years 2021-2026 were identified during data inspection as benchmark/projected
+   extension records rather than verified field observations, kept for trend coverage.
+3. Multi-Scale Handling:
+   Coconut yield scale (measured in nuts/hectare up to 21,000) is natively handled
+   alongside field crops (tonnes/hectare) using Random Forest multi-split trees.

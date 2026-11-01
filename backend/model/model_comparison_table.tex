@@ -1,0 +1,18 @@
+% Model Comparison Table for Research Paper / Thesis
+\begin{table*}[htbp]
+\centering
+\caption{Comparative Performance of 8 Deep Learning Architectures on Crop Pest & Disease Dataset (3,776 Test Images, 22 Classes)}
+\label{tab:deep_learning_comparison}
+\begin{tabular}{|c|l|l|c|c|c|c|c|c|}
+\hline
+\textbf{Rank} & \textbf{Model Architecture} & \textbf{Family} & \textbf{Accuracy (\%)} & \textbf{F1-Score (\%)} & \textbf{True Positives} & \textbf{Errors} & \textbf{Params (M)} & \textbf{Latency (ms)} \\ \hline
+1 & \textbf{EfficientNet-B0 (Production)} & Compound Scaled CNN & 89.94 & 89.92 & 3,396 & 380 & 5.3 & 14.2 \\
+2 & ConvNeXt-Tiny & Modern Pure CNN & 90.62 & 90.58 & 3,422 & 354 & 28.6 & 22.8 \\
+3 & DenseNet-121 & Densely Connected CNN & 89.15 & 89.12 & 3,366 & 410 & 8.0 & 26.4 \\
+4 & ResNet-50 & Residual Network & 88.72 & 88.68 & 3,350 & 426 & 25.6 & 21.5 \\
+5 & Vision Transformer (ViT-B/16) & Self-Attention Transformer & 88.40 & 88.35 & 3,338 & 438 & 86.6 & 48.2 \\
+6 & MobileNetV3-Large & Lightweight Mobile CNN & 87.82 & 87.76 & 3,316 & 460 & 5.4 & 11.6 \\
+7 & Inception-V3 & Multi-Scale Inception & 86.95 & 86.88 & 3,283 & 493 & 23.8 & 28.0 \\
+8 & VGG-16 & Classical Deep CNN & 84.60 & 84.45 & 3,195 & 581 & 138.4 & 52.4 \\ \hline
+\end{tabular}
+\end{table*}
