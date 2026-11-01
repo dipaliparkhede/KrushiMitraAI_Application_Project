@@ -105,9 +105,23 @@ KrishiMitraAI_project-main/
 
 ---
 
-## 🛠️ Verification & Evaluation Commands
+## 🛠️ Verification, Evaluation & EDA Commands
 
-### Verify Yield Model Split Alignment
+### 1. Run Comprehensive Exploratory Data Analysis (EDA)
+Execute EDA across the Disease Image dataset, Crop Recommendation dataset, and Yield Prediction dataset with publication-ready figure exports (300 DPI) and an automated Markdown report:
+
+```bash
+# Run complete EDA suite for all 3 datasets
+python backend/ml/eda/run_all_eda.py
+
+# Run individual dataset EDA
+python backend/ml/eda/disease_eda.py
+python backend/ml/eda/crop_eda.py
+python backend/ml/eda/yield_eda.py
+```
+*Outputs: 18 high-resolution graphs in `backend/ml/eda/outputs/figures/` and complete findings report in `backend/ml/eda/outputs/EDA_REPORT.md`.*
+
+### 2. Verify Yield Model Split Alignment
 To verify that the model metadata and dataset split match to 4 decimal places:
 
 ```bash
